@@ -22,3 +22,8 @@
 ;; the package manager before loading the init file, so this file is neither
 ;; needed nor loaded on those versions.
 (setq package-enable-at-startup nil)
+
+;;; https://github.com/kiwanami/emacs-epc/issues/35#issuecomment-660639327
+;;; Suppress "Package cl is deprecated" warnings.
+;;; https://github.com/syl20bnr/spacemacs/issues/13836
+(setq byte-compile-warnings '(cl-functions))
