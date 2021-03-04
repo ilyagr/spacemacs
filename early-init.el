@@ -27,3 +27,8 @@
 ;;; Suppress "Package cl is deprecated" warnings.
 ;;; https://github.com/syl20bnr/spacemacs/issues/13836
 (setq byte-compile-warnings '(cl-functions))
+
+(defadvice smartparens-mode (around disable-smartparens activate)
+  "Disable smartparens-mode completely.")
+;; Typing this in M-: should deactivate the above
+;; (ad-deactivate 'smartparens-mode)
